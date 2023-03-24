@@ -14,13 +14,18 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Switch(
+
+                value: true, onChanged: ( value) {
+
+            }) ,
+            Icon(Icons.movie, size: 20,color: Colors.green,),
+            Icon(Icons.movie),
+            Icon(Icons.movie),
+            Icon(Icons.movie),
+            Icon(Icons.movie),
             Text("ziad",
-            style: TextStyle(
-              // calling primaryColor from themeData
-              color: Theme.of(context).primaryColor
-                  ,
-              fontSize: 40
-            ),
+            style:Theme.of(context).textTheme.displayLarge
             ),
             TextButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder:
