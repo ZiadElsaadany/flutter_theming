@@ -1,42 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:theming_flutter/core/global/app_color/app_colors_light.dart';
 
-ThemeData   getThemeDataLight()=>ThemeData(
+ThemeData  lightTheme( )=>ThemeData(
 
-  
-  switchTheme: SwitchThemeData( 
-    // overlayColor: MaterialStateProperty.all(Colors.green)
-  thumbColor: MaterialStateProperty.all(Colors.green),
-    trackColor:MaterialStateProperty.all( Colors.black)
-  ),
+    fontFamily: "Cairo",
+    textTheme: TextTheme(
+      bodyMedium: TextStyle(
+        color: Colors.black,
 
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: AppColorsLight.greenColor,
-    foregroundColor: AppColorsLight.whiteColor
-  ),
+      ),
+      displayLarge:TextStyle(
+        color: Colors.green,
 
-textButtonTheme: TextButtonThemeData(
-    style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all(
-           AppColorsLight.whiteColor
-        ), 
-        backgroundColor: MaterialStateProperty.all(AppColorsLight.primaryColor)
-    )
-),
-    primaryColor: AppColorsLight.primaryColor ,
-    appBarTheme: const AppBarTheme(
-        color: AppColorsLight.appBarColor,
-      iconTheme: IconThemeData(
-        size: 20,
-        color: Colors.white
-      )
+      ),
+      titleLarge: TextStyle(
+        color: Colors.white,
+
+      ),
     ),
-  textTheme: const TextTheme(
+    primaryColor: Colors.blue,
+    appBarTheme:AppBarTheme(
+      color: Colors.black,
 
-  ),
-  iconTheme: IconThemeData(
-    size: 40,
-    color: Colors.grey
 
-  )
-);
+    ),
+    elevatedButtonTheme:ElevatedButtonThemeData(
+        style: ButtonStyle (
+          backgroundColor: MaterialStateProperty.all(Colors.blue),
+          shape:MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)
+              )
+          ) ,
+
+        )
+    ) ,
+    textButtonTheme:TextButtonThemeData(
+        style: ButtonStyle (
+          backgroundColor: MaterialStateProperty.all(Colors.blue),
+          shape:MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)
+              )
+          ) ,
+
+        )
+    ) ,
+
+
+    scaffoldBackgroundColor: Colors.red
+
+) ;

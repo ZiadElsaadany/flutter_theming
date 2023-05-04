@@ -1,9 +1,51 @@
-import 'package:flutter/material.dart';
-import 'package:theming_flutter/core/global/app_color/app_colors_dark.dart';
 
-ThemeData   getThemeDataDark()=>ThemeData(
-  primaryColor: AppColorsDark.primaryColor ,
-  appBarTheme: const AppBarTheme(
-    color: AppColorsDark.appBarColor
+
+
+
+  import 'package:flutter/material.dart';
+
+ThemeData darkTheme()=>ThemeData(
+  primaryColor: Colors.black,
+  scaffoldBackgroundColor: Colors.white,
+  elevatedButtonTheme:ElevatedButtonThemeData(
+  style: ButtonStyle (
+  backgroundColor: MaterialStateProperty.all(Colors.black),
+  shape:MaterialStateProperty.all(
+  RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(20)
   )
-);
+  ) ,
+
+  )
+  ) ,
+  textButtonTheme:TextButtonThemeData(
+  style: ButtonStyle (
+
+  backgroundColor: MaterialStateProperty.all(Colors.black),
+  shape:MaterialStateProperty.all(
+  RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(20)
+  )
+  ) ,
+
+  )
+  ) ,
+
+
+
+  fontFamily: "Cairo",
+  textTheme: TextTheme(
+  bodyMedium: TextStyle(
+  color: Colors.white,
+
+  ),
+  displayLarge:TextStyle(
+  color: Colors.grey,
+
+  ),
+  titleLarge: TextStyle(
+  color: Colors.black,
+
+  ),
+  )
+  );
